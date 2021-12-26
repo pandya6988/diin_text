@@ -451,7 +451,7 @@ print(ori_translate_text[1])</code></pre>
     
     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span> <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Egnlish&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">en_text</span><span class="p">,</span> <span class="s1">&#39;German&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">de_text</span><span class="p">}</span>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span> <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Egnlish&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">en_text</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="s1">&#39;German&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">de_text</span><span class="p">[</span><span class="n">idx</span><span class="p">]}</span>
 </pre></div>
 
     </div>
@@ -481,7 +481,7 @@ print(ori_translate_text[1])</code></pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Translating text : 100%|██████████| 3/3 [00:01&lt;00:00,  1.57it/s]
+<pre>Translating text : 100%|██████████| 3/3 [00:01&lt;00:00,  1.61it/s]
 </pre>
 </div>
 </div>
@@ -514,13 +514,8 @@ print(ori_translate_text[1])</code></pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Egnlish&#39;: array([&#39;Hello, world!&#39;,
-        &#34;Here&#39;s a public example page. You can see on the files tab, there&#39;s a model-best.h5. That&#39;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#39;ll store it for you in association with your run.&#34;,
-        &#34;nbdev is a system for exploratory programming. See the nbdev launch post for information about what that means. In practice, programming in this way can feel very different to the kind of programming many of you will be familiar with, since we&#39;ve mainly be taught coding techniques that are (at least implicitly) tied to the underlying tools we have access to. I&#39;ve found that programming in a &#39;notebook first&#39; way can make me 2-3x more productive than I was before (when we used vscode, Visual Studio, vim, PyCharm, and similar tools).&#34;],
-       dtype=object), &#39;German&#39;: array([&#39;Hallo, Welt!&#39;,
-        &#39;Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.&#39;,
-        &#39;nbdev ist ein System zur explorativen Programmierung. Lesen Sie den nbdev Launch Post für Informationen, was das bedeutet. In der Praxis kann sich die Programmierung auf diese Weise sehr unterschiedlich an die Art der Programmierung fühlen, mit der viele von Ihnen vertraut sind, da wir hauptsächlich Codierungstechniken gelehrt haben, die (zumindest implizit) an die zugrunde liegenden Werkzeuge gebunden sind, zu denen wir Zugang haben. Ich habe gefunden, dass die Programmierung in einer &#34;Notebook first&#34; Weise kann mich 2-3x produktiver machen als ich vorher war (wenn wir vscode, Visual Studio, vim, PyCharm und ähnliche Tools verwendet).&#39;],
-       dtype=object)}</pre>
+<pre>{&#39;Egnlish&#39;: &#34;Here&#39;s a public example page. You can see on the files tab, there&#39;s a model-best.h5. That&#39;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#39;ll store it for you in association with your run.&#34;,
+ &#39;German&#39;: &#39;Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.&#39;}</pre>
 </div>
 
 </div>
@@ -595,7 +590,7 @@ z
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
      <g id="line2d_1">
-      <path clip-path="url(#p5c3773a98e)" d="M 107.95228 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 107.95228 565.918125 
 L 107.95228 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -653,7 +648,7 @@ z
     </g>
     <g id="xtick_2">
      <g id="line2d_2">
-      <path clip-path="url(#p5c3773a98e)" d="M 233.226672 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 233.226672 565.918125 
 L 233.226672 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -694,7 +689,7 @@ z
     </g>
     <g id="xtick_3">
      <g id="line2d_3">
-      <path clip-path="url(#p5c3773a98e)" d="M 358.501065 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 358.501065 565.918125 
 L 358.501065 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -707,7 +702,7 @@ L 358.501065 22.318125
     </g>
     <g id="xtick_4">
      <g id="line2d_4">
-      <path clip-path="url(#p5c3773a98e)" d="M 483.775457 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 483.775457 565.918125 
 L 483.775457 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -721,7 +716,7 @@ L 483.775457 22.318125
     </g>
     <g id="xtick_5">
      <g id="line2d_5">
-      <path clip-path="url(#p5c3773a98e)" d="M 609.04985 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 609.04985 565.918125 
 L 609.04985 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -736,7 +731,7 @@ L 609.04985 22.318125
     </g>
     <g id="xtick_6">
      <g id="line2d_6">
-      <path clip-path="url(#p5c3773a98e)" d="M 734.324243 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 734.324243 565.918125 
 L 734.324243 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -751,7 +746,7 @@ L 734.324243 22.318125
     </g>
     <g id="xtick_7">
      <g id="line2d_7">
-      <path clip-path="url(#p5c3773a98e)" d="M 859.598635 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 859.598635 565.918125 
 L 859.598635 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -990,7 +985,7 @@ z
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
      <g id="line2d_8">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 565.918125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 565.918125 
 L 893.50625 565.918125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1015,7 +1010,7 @@ z
     </g>
     <g id="ytick_2">
      <g id="line2d_9">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 496.803268 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 496.803268 
 L 893.50625 496.803268 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1032,7 +1027,7 @@ L 893.50625 496.803268
     </g>
     <g id="ytick_3">
      <g id="line2d_10">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 427.688411 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 427.688411 
 L 893.50625 427.688411 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1068,7 +1063,7 @@ z
     </g>
     <g id="ytick_4">
      <g id="line2d_11">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 358.573554 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 358.573554 
 L 893.50625 358.573554 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1117,7 +1112,7 @@ z
     </g>
     <g id="ytick_5">
      <g id="line2d_12">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 289.458696 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 289.458696 
 L 893.50625 289.458696 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1175,7 +1170,7 @@ z
     </g>
     <g id="ytick_6">
      <g id="line2d_13">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 220.343839 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 220.343839 
 L 893.50625 220.343839 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1192,7 +1187,7 @@ L 893.50625 220.343839
     </g>
     <g id="ytick_7">
      <g id="line2d_14">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 151.228982 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 151.228982 
 L 893.50625 151.228982 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1209,7 +1204,7 @@ L 893.50625 151.228982
     </g>
     <g id="ytick_8">
      <g id="line2d_15">
-      <path clip-path="url(#p5c3773a98e)" d="M 56.50625 82.114125 
+      <path clip-path="url(#pbcb94c41fa)" d="M 56.50625 82.114125 
 L 893.50625 82.114125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1315,7 +1310,7 @@ z
     </g>
    </g>
    <g id="patch_3">
-    <path clip-path="url(#p5c3773a98e)" d="M 363.512041 565.918125 
+    <path clip-path="url(#pbcb94c41fa)" d="M 363.512041 565.918125 
 L 475.00625 565.918125 
 L 475.00625 48.203839 
 L 363.512041 48.203839 
@@ -1323,7 +1318,7 @@ z
 " style="fill:#1f77b4;opacity:0.4;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="patch_4">
-    <path clip-path="url(#p5c3773a98e)" d="M 475.00625 565.918125 
+    <path clip-path="url(#pbcb94c41fa)" d="M 475.00625 565.918125 
 L 586.500459 565.918125 
 L 586.500459 307.060982 
 L 475.00625 307.060982 
@@ -1331,7 +1326,7 @@ z
 " style="fill:#1f77b4;opacity:0.4;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="line2d_16">
-    <path clip-path="url(#p5c3773a98e)" d="M 94.551705 564.464693 
+    <path clip-path="url(#pbcb94c41fa)" d="M 94.551705 564.464693 
 L 106.022696 563.796002 
 L 117.493687 562.868668 
 L 125.141015 562.069044 
@@ -1506,7 +1501,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p5c3773a98e">
+  <clipPath id="pbcb94c41fa">
    <rect height="543.6" width="837" x="56.50625" y="22.318125"/>
   </clipPath>
  </defs>
@@ -1586,7 +1581,7 @@ z
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
      <g id="line2d_1">
-      <path clip-path="url(#p406bcf421f)" d="M 119.60214 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 119.60214 565.918125 
 L 119.60214 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1644,7 +1639,7 @@ z
     </g>
     <g id="xtick_2">
      <g id="line2d_2">
-      <path clip-path="url(#p406bcf421f)" d="M 239.266823 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 239.266823 565.918125 
 L 239.266823 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1685,7 +1680,7 @@ z
     </g>
     <g id="xtick_3">
      <g id="line2d_3">
-      <path clip-path="url(#p406bcf421f)" d="M 358.931507 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 358.931507 565.918125 
 L 358.931507 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1698,7 +1693,7 @@ L 358.931507 22.318125
     </g>
     <g id="xtick_4">
      <g id="line2d_4">
-      <path clip-path="url(#p406bcf421f)" d="M 478.596191 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 478.596191 565.918125 
 L 478.596191 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1712,7 +1707,7 @@ L 478.596191 22.318125
     </g>
     <g id="xtick_5">
      <g id="line2d_5">
-      <path clip-path="url(#p406bcf421f)" d="M 598.260874 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 598.260874 565.918125 
 L 598.260874 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1727,7 +1722,7 @@ L 598.260874 22.318125
     </g>
     <g id="xtick_6">
      <g id="line2d_6">
-      <path clip-path="url(#p406bcf421f)" d="M 717.925558 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 717.925558 565.918125 
 L 717.925558 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1742,7 +1737,7 @@ L 717.925558 22.318125
     </g>
     <g id="xtick_7">
      <g id="line2d_7">
-      <path clip-path="url(#p406bcf421f)" d="M 837.590242 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 837.590242 565.918125 
 L 837.590242 22.318125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -1981,7 +1976,7 @@ z
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
      <g id="line2d_8">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 565.918125 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 565.918125 
 L 893.50625 565.918125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2006,7 +2001,7 @@ z
     </g>
     <g id="ytick_2">
      <g id="line2d_9">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 493.696982 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 493.696982 
 L 893.50625 493.696982 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2023,7 +2018,7 @@ L 893.50625 493.696982
     </g>
     <g id="ytick_3">
      <g id="line2d_10">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 421.475839 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 421.475839 
 L 893.50625 421.475839 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2059,7 +2054,7 @@ z
     </g>
     <g id="ytick_4">
      <g id="line2d_11">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 349.254696 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 349.254696 
 L 893.50625 349.254696 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2108,7 +2103,7 @@ z
     </g>
     <g id="ytick_5">
      <g id="line2d_12">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 277.033554 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 277.033554 
 L 893.50625 277.033554 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2166,7 +2161,7 @@ z
     </g>
     <g id="ytick_6">
      <g id="line2d_13">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 204.812411 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 204.812411 
 L 893.50625 204.812411 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2183,7 +2178,7 @@ L 893.50625 204.812411
     </g>
     <g id="ytick_7">
      <g id="line2d_14">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 132.591268 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 132.591268 
 L 893.50625 132.591268 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2200,7 +2195,7 @@ L 893.50625 132.591268
     </g>
     <g id="ytick_8">
      <g id="line2d_15">
-      <path clip-path="url(#p406bcf421f)" d="M 56.50625 60.370125 
+      <path clip-path="url(#pbc7be20232)" d="M 56.50625 60.370125 
 L 893.50625 60.370125 
 " style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-width:0.8;"/>
      </g>
@@ -2306,7 +2301,7 @@ z
     </g>
    </g>
    <g id="patch_3">
-    <path clip-path="url(#p406bcf421f)" d="M 363.718094 565.918125 
+    <path clip-path="url(#pbc7be20232)" d="M 363.718094 565.918125 
 L 475.00625 565.918125 
 L 475.00625 48.203839 
 L 363.718094 48.203839 
@@ -2314,7 +2309,7 @@ z
 " style="fill:#1f77b4;opacity:0.4;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="patch_4">
-    <path clip-path="url(#p406bcf421f)" d="M 475.00625 565.918125 
+    <path clip-path="url(#pbc7be20232)" d="M 475.00625 565.918125 
 L 586.294406 565.918125 
 L 586.294406 307.060982 
 L 475.00625 307.060982 
@@ -2322,7 +2317,7 @@ z
 " style="fill:#1f77b4;opacity:0.4;stroke:#ffffff;stroke-linejoin:miter;"/>
    </g>
    <g id="line2d_16">
-    <path clip-path="url(#p406bcf421f)" d="M 94.551705 564.458579 
+    <path clip-path="url(#pbc7be20232)" d="M 94.551705 564.458579 
 L 106.022696 563.786108 
 L 117.493687 562.852783 
 L 125.141015 562.047384 
@@ -2501,7 +2496,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p406bcf421f">
+  <clipPath id="pbc7be20232">
    <rect height="543.6" width="837" x="56.50625" y="22.318125"/>
   </clipPath>
  </defs>
@@ -2548,16 +2543,16 @@ z
     </thead>
     <tbody>
         <tr>
-            <td>[&#x27;Hello, world!&#x27;<br> &quot;Here&#x27;s a public example page. You can see on the files tab, there&#x27;s a model-best.h5. That&#x27;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#x27;ll store it for you in association with your run.&quot;<br> &quot;nbdev is a system for exploratory programming. See the nbdev launch post for information about what that means. In practice, programming in this way can feel very different to the kind of programming many of you will be familiar with, since we&#x27;ve mainly be taught coding techniques that are (at least implicitly) tied to the underlying tools we have access to. I&#x27;ve found that programming in a &#x27;notebook first&#x27; way can make me 2-3x more productive than I was before (when we used vscode, Visual Studio, vim, PyCharm, and similar tools).&quot;]</td>
-            <td>[&#x27;Hallo, Welt!&#x27;<br> &#x27;Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.&#x27;<br> &#x27;nbdev ist ein System zur explorativen Programmierung. Lesen Sie den nbdev Launch Post für Informationen, was das bedeutet. In der Praxis kann sich die Programmierung auf diese Weise sehr unterschiedlich an die Art der Programmierung fühlen, mit der viele von Ihnen vertraut sind, da wir hauptsächlich Codierungstechniken gelehrt haben, die (zumindest implizit) an die zugrunde liegenden Werkzeuge gebunden sind, zu denen wir Zugang haben. Ich habe gefunden, dass die Programmierung in einer &quot;Notebook first&quot; Weise kann mich 2-3x produktiver machen als ich vorher war (wenn wir vscode, Visual Studio, vim, PyCharm und ähnliche Tools verwendet).&#x27;]</td>
+            <td>Hello, world!</td>
+            <td>Hallo, Welt!</td>
         </tr>
         <tr>
-            <td>[&#x27;Hello, world!&#x27;<br> &quot;Here&#x27;s a public example page. You can see on the files tab, there&#x27;s a model-best.h5. That&#x27;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#x27;ll store it for you in association with your run.&quot;<br> &quot;nbdev is a system for exploratory programming. See the nbdev launch post for information about what that means. In practice, programming in this way can feel very different to the kind of programming many of you will be familiar with, since we&#x27;ve mainly be taught coding techniques that are (at least implicitly) tied to the underlying tools we have access to. I&#x27;ve found that programming in a &#x27;notebook first&#x27; way can make me 2-3x more productive than I was before (when we used vscode, Visual Studio, vim, PyCharm, and similar tools).&quot;]</td>
-            <td>[&#x27;Hallo, Welt!&#x27;<br> &#x27;Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.&#x27;<br> &#x27;nbdev ist ein System zur explorativen Programmierung. Lesen Sie den nbdev Launch Post für Informationen, was das bedeutet. In der Praxis kann sich die Programmierung auf diese Weise sehr unterschiedlich an die Art der Programmierung fühlen, mit der viele von Ihnen vertraut sind, da wir hauptsächlich Codierungstechniken gelehrt haben, die (zumindest implizit) an die zugrunde liegenden Werkzeuge gebunden sind, zu denen wir Zugang haben. Ich habe gefunden, dass die Programmierung in einer &quot;Notebook first&quot; Weise kann mich 2-3x produktiver machen als ich vorher war (wenn wir vscode, Visual Studio, vim, PyCharm und ähnliche Tools verwendet).&#x27;]</td>
+            <td>nbdev is a system for exploratory programming. See the nbdev launch post for information about what that means. In practice, programming in this way can feel very different to the kind of programming many of you will be familiar with, since we&#x27;ve mainly be taught coding techniques that are (at least implicitly) tied to the underlying tools we have access to. I&#x27;ve found that programming in a &#x27;notebook first&#x27; way can make me 2-3x more productive than I was before (when we used vscode, Visual Studio, vim, PyCharm, and similar tools).</td>
+            <td>nbdev ist ein System zur explorativen Programmierung. Lesen Sie den nbdev Launch Post für Informationen, was das bedeutet. In der Praxis kann sich die Programmierung auf diese Weise sehr unterschiedlich an die Art der Programmierung fühlen, mit der viele von Ihnen vertraut sind, da wir hauptsächlich Codierungstechniken gelehrt haben, die (zumindest implizit) an die zugrunde liegenden Werkzeuge gebunden sind, zu denen wir Zugang haben. Ich habe gefunden, dass die Programmierung in einer &quot;Notebook first&quot; Weise kann mich 2-3x produktiver machen als ich vorher war (wenn wir vscode, Visual Studio, vim, PyCharm und ähnliche Tools verwendet).</td>
         </tr>
         <tr>
-            <td>[&#x27;Hello, world!&#x27;<br> &quot;Here&#x27;s a public example page. You can see on the files tab, there&#x27;s a model-best.h5. That&#x27;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#x27;ll store it for you in association with your run.&quot;<br> &quot;nbdev is a system for exploratory programming. See the nbdev launch post for information about what that means. In practice, programming in this way can feel very different to the kind of programming many of you will be familiar with, since we&#x27;ve mainly be taught coding techniques that are (at least implicitly) tied to the underlying tools we have access to. I&#x27;ve found that programming in a &#x27;notebook first&#x27; way can make me 2-3x more productive than I was before (when we used vscode, Visual Studio, vim, PyCharm, and similar tools).&quot;]</td>
-            <td>[&#x27;Hallo, Welt!&#x27;<br> &#x27;Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.&#x27;<br> &#x27;nbdev ist ein System zur explorativen Programmierung. Lesen Sie den nbdev Launch Post für Informationen, was das bedeutet. In der Praxis kann sich die Programmierung auf diese Weise sehr unterschiedlich an die Art der Programmierung fühlen, mit der viele von Ihnen vertraut sind, da wir hauptsächlich Codierungstechniken gelehrt haben, die (zumindest implizit) an die zugrunde liegenden Werkzeuge gebunden sind, zu denen wir Zugang haben. Ich habe gefunden, dass die Programmierung in einer &quot;Notebook first&quot; Weise kann mich 2-3x produktiver machen als ich vorher war (wenn wir vscode, Visual Studio, vim, PyCharm und ähnliche Tools verwendet).&#x27;]</td>
+            <td>Here&#x27;s a public example page. You can see on the files tab, there&#x27;s a model-best.h5. That&#x27;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#x27;ll store it for you in association with your run.</td>
+            <td>Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.</td>
         </tr>
     </tbody>
 </table>
