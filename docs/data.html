@@ -40,7 +40,7 @@ nb_path: "notebooks/00_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="generate_translator" class="doc_header"><code>generate_translator</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L7" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>generate_translator</code>(<strong><code>path</code></strong>=<em><code>'translate-en_de-1_0.argosmodel'</code></em>)</p>
+<h4 id="generate_translator" class="doc_header"><code>generate_translator</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L8" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>generate_translator</code>(<strong><code>path</code></strong>=<em><code>'translate-en_de-1_0.argosmodel'</code></em>)</p>
 </blockquote>
 <p>path[str]: path to file from <a href="https://www.argosopentech.com/argospm/index/">https://www.argosopentech.com/argospm/index/</a></p>
 
@@ -79,7 +79,7 @@ nb_path: "notebooks/00_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="strip_html" class="doc_header"><code>strip_html</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L18" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>strip_html</code>(<strong><code>text</code></strong>)</p>
+<h4 id="strip_html" class="doc_header"><code>strip_html</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L19" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>strip_html</code>(<strong><code>text</code></strong>)</p>
 </blockquote>
 <p>Remove html text</p>
 
@@ -111,7 +111,7 @@ nb_path: "notebooks/00_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="OriTraTranslation" class="doc_header"><code>class</code> <code>OriTraTranslation</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L26" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>OriTraTranslation</code>(<strong><code>ori_text</code></strong>, <strong><code>path</code></strong>=<em><code>'translate-en_de-1_0.argosmodel'</code></em>)</p>
+<h2 id="OriTraTranslation" class="doc_header"><code>class</code> <code>OriTraTranslation</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L27" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>OriTraTranslation</code>(<strong><code>ori_text</code></strong>, <strong><code>path</code></strong>=<em><code>'translate-en_de-1_0.argosmodel'</code></em>)</p>
 </blockquote>
 
 </div>
@@ -149,6 +149,49 @@ nb_path: "notebooks/00_data.ipynb"
 <p><strong>Output</strong>: <br>
 {'ori_text': 'Hello world!', 'translated_text': 'Hallo Welt!'} <br>
 {'ori_text': 'Welcome to year 2022.', 'translated_text': 'Willkommen im Jahr 2022.'}</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="create_ori_trans_dataframe" class="doc_header"><code>create_ori_trans_dataframe</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L49" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_ori_trans_dataframe</code>(<strong><code>text_in</code></strong>, <strong><code>path</code></strong>)</p>
+</blockquote>
+<p>Input:
+    text_in[list]: list of text
+    path[str]: path to file from <a href="https://www.argosopentech.com/argospm/index">https://www.argosopentech.com/argospm/index</a></p>
+<p>Output:
+    Pandas dataframe: {'text_in': input text, 'trans_text':translated text}</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Translate corpus(all text) and return pandas DataFrame with original text and translated text</p>
 
 </div>
 </div>
