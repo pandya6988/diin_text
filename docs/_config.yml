@@ -1,9 +1,9 @@
-repository: pandya6988/diit_text
+repository: pandya6988/diin_text
 output: web
-topnav_title: diit_text
-site_title: diit_text
+topnav_title: diin_text
+site_title: diin_text
 company_name: MIT
-description: help library
+description: Basic math
 # Set to false to disable KaTeX math
 use_math: true
 # Add Google analytics id if you have one and want to use it here

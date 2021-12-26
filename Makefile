@@ -2,11 +2,11 @@
 SHELL := /bin/bash
 SRC = $(wildcard ./*.ipynb)
 
-all: diit_text docs
+all: prac docs
 
-diit_text: $(SRC)
+prac: $(SRC)
 	nbdev_build_lib
-	touch diit_text
+	touch prac
 
 sync:
 	nbdev_update_lib

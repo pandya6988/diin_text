@@ -2,9 +2,10 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"generate_translator": "00_data.ipynb",
+         "default_translator_path": "00_data.ipynb"}
 
-modules = []
+modules = ["data.py"]
 
 doc_url = "https://pandya6988.github.io/diin_text/"
 
