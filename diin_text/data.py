@@ -8,7 +8,7 @@ def generate_translator(path='translate-en_de-1_0.argosmodel'):
     '''
         path[str]: path to file from https://www.argosopentech.com/argospm/index/
     '''
-    package.install_from_path('translate-en_de-1_0.argosmodel')
+    package.install_from_path(path)
     installed_languages = translate.get_installed_languages()
     [str(lang) for lang in installed_languages]
     translation_en_de = installed_languages[0].get_translation(installed_languages[1])
@@ -24,7 +24,7 @@ def strip_html(text):
 
 # Cell
 class OriTraTranslation():
-    def __init__(self, ori_text, path):
+    def __init__(self, ori_text, path=default_translator_path):
         '''
         Input:
             ori_text[str]: Original text
