@@ -6,6 +6,7 @@ index = {"generate_translator": "00_data.ipynb",
          "default_translator_path": "00_data.ipynb",
          "strip_html": "00_data.ipynb",
          "OriTraTranslation": "00_data.ipynb",
+         "PrettyDataset": "00_data.ipynb",
          "create_ori_trans_dataframe": "00_data.ipynb",
          "print_dataframe_table": "00_data.ipynb",
          "plot_text_length": "00_data.ipynb"}
