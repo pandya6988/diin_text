@@ -167,11 +167,7 @@ print(ori_translate_text[1])</code></pre>
 <div class="output_markdown rendered_html output_subarea ">
 <h4 id="create_ori_trans_dataframe" class="doc_header"><code>create_ori_trans_dataframe</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/data.py#L49" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_ori_trans_dataframe</code>(<strong><code>text_in</code></strong>, <strong><code>path</code></strong>)</p>
 </blockquote>
-<p>Input:
-text_in[list]: list of text
-path[str]: path to file from <a href="https://www.argosopentech.com/argospm/index">https://www.argosopentech.com/argospm/index</a></p>
-<p>Output:
-Pandas dataframe: {'text_in': input text, 'trans_text':translated text}</p>
+<p>Output: Pandas dataframe: {'text_in': input text, 'trans_text':translated text}</p>
 
 </div>
 
@@ -193,6 +189,46 @@ Pandas dataframe: {'text_in': input text, 'trans_text':translated text}</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Translate corpus(all text) and return pandas DataFrame with original text and translated text</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_dataframe_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">schuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Randomly see n examples</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">schuffle</span><span class="p">:</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ptable</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">()</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="n">ptable</span><span class="o">.</span><span class="n">field_names</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="n">plist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">df</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="p">)</span>
+        <span class="n">plist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">ptable</span><span class="o">.</span><span class="n">add_rows</span><span class="p">(</span><span class="n">plist</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">ptable</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This function is useful when we want to compare long texts. (pandas truncate the long text.)</p>
 
 </div>
 </div>

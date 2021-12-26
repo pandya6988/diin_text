@@ -48,12 +48,7 @@ class OriTraTranslation():
 # Cell
 def create_ori_trans_dataframe(text_in, path):
     '''
-    Input:
-    text_in[list]: list of text
-    path[str]: path to file from https://www.argosopentech.com/argospm/index
-
-    Output:
-    Pandas dataframe: {'text_in': input text, 'trans_text':translated text}
+    Output: Pandas dataframe: {'text_in': input text, 'trans_text':translated text}
     '''
     ori_sentences = []
     trans_sentences = []
