@@ -72,7 +72,7 @@ class PrettyDataset():
         plt.title('Sentence length vs Density')
         plt.show()
 
-    def show_examples(self, n):
+    def show_output_examples(self, n):
         '''
         n[int]: Show n examples
         '''
