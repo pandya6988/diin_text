@@ -382,7 +382,7 @@ print(ori_translate_text[1])</code></pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">en_de_translation</span> <span class="o">=</span> <span class="n">create_ori_trans_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">default_translator_path</span><span class="p">)</span>
-<span class="n">print_dataframe_table</span><span class="p">(</span><span class="n">en_de_translation</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">en_de_translation</span>
 </pre></div>
 
     </div>
@@ -395,10 +395,89 @@ print(ori_translate_text[1])</code></pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Translating text : 100%|██████████| 3/3 [00:01&lt;00:00,  1.51it/s]
+<pre>Translating text : 100%|██████████| 3/3 [00:01&lt;00:00,  1.68it/s]
 </pre>
 </div>
 </div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ori_text</th>
+      <th>trans_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Hello, world!</td>
+      <td>Hallo, Welt!</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Here's a public example page. You can see on t...</td>
+      <td>Hier ist eine öffentliche Beispielseite. Sie k...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>nbdev is a system for exploratory programming....</td>
+      <td>nbdev ist ein System zur explorativen Programm...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As we can see above pandas DataFram truncate the long text. In order to check quality of translated text, we have to read complete text and not just truncated version and for that we can use <a href="/diin_text/data.html#print_dataframe_table"><code>print_dataframe_table</code></a>function.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_dataframe_table</span><span class="p">(</span><span class="n">en_de_translation</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 <div class="output_area">
 
@@ -413,16 +492,16 @@ print(ori_translate_text[1])</code></pre>
     </thead>
     <tbody>
         <tr>
+            <td>Hello, world!</td>
+            <td>Hallo, Welt!</td>
+        </tr>
+        <tr>
             <td>Here&#x27;s a public example page. You can see on the files tab, there&#x27;s a model-best.h5. That&#x27;s automatically saved by default by the Keras integration, but you can save a checkpoint manually and we&#x27;ll store it for you in association with your run.</td>
             <td>Hier ist eine öffentliche Beispielseite. Sie können auf der Registerkarte Dateien sehen, gibt es eine model-best.h5. Das wird standardmäßig durch die Keras-Integration gespeichert, aber Sie können einen Checkpoint manuell speichern und wir speichern es für Sie in Verbindung mit Ihrem Lauf.</td>
         </tr>
         <tr>
             <td>nbdev is a system for exploratory programming. See the nbdev launch post for information about what that means. In practice, programming in this way can feel very different to the kind of programming many of you will be familiar with, since we&#x27;ve mainly be taught coding techniques that are (at least implicitly) tied to the underlying tools we have access to. I&#x27;ve found that programming in a &#x27;notebook first&#x27; way can make me 2-3x more productive than I was before (when we used vscode, Visual Studio, vim, PyCharm, and similar tools).</td>
             <td>nbdev ist ein System zur explorativen Programmierung. Lesen Sie den nbdev Launch Post für Informationen, was das bedeutet. In der Praxis kann sich die Programmierung auf diese Weise sehr unterschiedlich an die Art der Programmierung fühlen, mit der viele von Ihnen vertraut sind, da wir hauptsächlich Codierungstechniken gelehrt haben, die (zumindest implizit) an die zugrunde liegenden Werkzeuge gebunden sind, zu denen wir Zugang haben. Ich habe gefunden, dass die Programmierung in einer &quot;Notebook first&quot; Weise kann mich 2-3x produktiver machen als ich vorher war (wenn wir vscode, Visual Studio, vim, PyCharm und ähnliche Tools verwendet).</td>
-        </tr>
-        <tr>
-            <td>Hello, world!</td>
-            <td>Hallo, Welt!</td>
         </tr>
     </tbody>
 </table>
@@ -2520,7 +2599,7 @@ z
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_output</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">show_output_examples</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">dataset_output</span> 
+<span class="n">dataset_output</span>  
 </pre></div>
 
     </div>
