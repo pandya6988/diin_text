@@ -142,11 +142,12 @@ nb_path: "notebooks/00_data.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>df = pd.DataFrame({'text': ['Hello world!', 'Welcome to year 2022.', 'Hello Alex, where did you born?']})</code><br><br>
-<code>ori_translate_text = OriTraTranslation(df['text'], default_translator_path)</code> <br>
-<code>print(ori_translate_text[0])</code><br>
-<code>print(ori_translate_text[1])</code></p>
-<p><strong>Output</strong>: <br>
+
+<pre><code>df = pd.DataFrame({'text': ['Hello world!', 'Welcome to year 2022.', 'Hello Alex, where did you born?']})
+ori_translate_text = OriTraTranslation(df['text'], default_translator_path)
+print(ori_translate_text[0])
+print(ori_translate_text[1])</code></pre>
+<p>*Output: <br>
 {'ori_text': 'Hello world!', 'translated_text': 'Hallo Welt!'} <br>
 {'ori_text': 'Welcome to year 2022.', 'translated_text': 'Willkommen im Jahr 2022.'}</p>
 
