@@ -133,51 +133,26 @@ nb_path: "notebooks/00_data.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Input:<br>
-    ori_text[str]: Original text <br>
-    path[str]: path to file from <a href="https://www.argosopentech.com/argospm/index">https://www.argosopentech.com/argospm/index</a><br>
-Output:<br> 
+<p><strong>Output:</strong><br> 
     dict[dict]: { ori_text:Original text, translated_text: translated text }</p>
 <p>This is useful when you don't want to translate all text but check few text.</p>
 
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">,</span> <span class="s1">&#39;Welcome to year 2022.&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello Alex, where did you born?&#39;</span><span class="p">]})</span>
-<span class="n">ori_translate_text</span> <span class="o">=</span> <span class="n">OriTraTranslation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">default_translator_path</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ori_translate_text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ori_translate_text</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;ori_text&#39;: &#39;Hello world!&#39;, &#39;translated_text&#39;: &#39;Hallo Welt!&#39;}
-{&#39;ori_text&#39;: &#39;Welcome to year 2022.&#39;, &#39;translated_text&#39;: &#39;Willkommen im Jahr 2022.&#39;}
-</pre>
-</div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>df = pd.DataFrame({'text': ['Hello world!', 'Welcome to year 2022.', 'Hello Alex, where did you born?']})</code><br><br>
+<code>ori_translate_text = OriTraTranslation(df['text'], default_translator_path)</code> <br>
+<code>print(ori_translate_text[0])</code><br>
+<code>print(ori_translate_text[1])</code></p>
+<p><strong>Output</strong>: <br>
+{'ori_text': 'Hello world!', 'translated_text': 'Hallo Welt!'} <br>
+{'ori_text': 'Welcome to year 2022.', 'translated_text': 'Willkommen im Jahr 2022.'}</p>
 
 </div>
 </div>
-
 </div>
-    {% endraw %}
-
 </div>
  
 
