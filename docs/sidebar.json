@@ -1,6 +1,7 @@
 {
   "diin_text": {
     "Overview": "/",
-    "data": "data.html"
+    "data": "data.html",
+    "model ": "model.html"
   }
 }

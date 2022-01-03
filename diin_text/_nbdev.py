@@ -9,9 +9,12 @@ index = {"generate_translator": "00_data.ipynb",
          "create_ori_trans_dataframe": "00_data.ipynb",
          "print_dataframe_table": "00_data.ipynb",
          "plot_text_length": "00_data.ipynb",
-         "PrettyDataset": "00_data.ipynb"}
+         "PrettyDataset": "00_data.ipynb",
+         "ForwardHook": "01_model.ipynb",
+         "get_linear_layer_activations_states": "01_model.ipynb"}
 
-modules = ["data.py"]
+modules = ["data.py",
+           "model.py"]
 
 doc_url = "https://pandya6988.github.io/diin_text/"
 

@@ -1,12 +1,12 @@
-# Project name here
-> Summary description here.
+# diin_text
+> help library
 
 
 This file will become your README and also the index of your documentation.
 
 ## Install
 
-`pip install prac`
+`pip install diin_text`
 
 ## How to use
 
