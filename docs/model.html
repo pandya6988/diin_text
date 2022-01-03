@@ -69,13 +69,20 @@ nb_path: "notebooks/01_model.ipynb"
 <li>activation(bool): if True, it will track module output</li>
 <li>stats(bool): if True, it will track module output mean and std </li>
 </ul>
+<p>Output: <br></p>
+<ul>
+<li>ForwardHook.means(list): list of means</li>
+<li>ForwardHook.stds(list): list of std </li>
+<li>ForwardHook.status(str): Hook status (active/removed)</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="_stack_activations"><code>_stack_activations</code><a class="anchor-link" href="#_stack_activations"> </a></h2>
+<p><code>_stack_activations()</code>: Stack all output(activations) once all outputs are saved in ForwardHook.activations</p>
+
 </div>
 </div>
 </div>
@@ -83,6 +90,12 @@ nb_path: "notebooks/01_model.ipynb"
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This class can be inheritet this class and define your own <code>hook_fn</code></p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Collect-intermediate-activations-and-stats">Collect intermediate activations and stats<a class="anchor-link" href="#Collect-intermediate-activations-and-stats"> </a></h1>
 </div>
 </div>
 </div>
