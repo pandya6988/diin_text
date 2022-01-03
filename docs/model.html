@@ -156,7 +156,7 @@ nb_path: "notebooks/01_model.ipynb"
 
 model = BertSentiModel()
 model.load_state_dict(state_dict)
-hooks, output_list = get_linear_layer_activations_states(dataloader, model, ['lin1', 'bert_model', 'lin2'], stats=True, activation=True, output=True, remove_hooks=True)</code></pre>
+hooks, output_list = get_linear_layer_activations_states(dls=dataloader, model=model, layers=['lin1', 'bert_model', 'lin2'], stats=True, activation=True, output=True, remove_hooks=True)</code></pre>
 
 </div>
 </div>
