@@ -28,10 +28,11 @@ class ForwardHook():
         self.status = 'removed'
 
 # Cell
-def get_linear_layer_activations_states(dls, model, layers:list, stats:bool, activation:bool, remove_hooks=True):
+def get_linear_layer_activations_states(dls, model, layers:list, stats:bool, activation:bool, output:bool, remove_hooks=True):
+  ''' useful when model is trained and want to analyze intermediate layers'''
 
   hooks = dict()
-  output_dict = {'senti': list(), 'lang': list()}
+  if output: output_list = []
 
   for layer in layers:
     if hasattr(model, layer): hooks[f'{layer}'] = ForwardHook ( getattr(model, layer),layer, activation=activation, stats=stats )
@@ -41,15 +42,14 @@ def get_linear_layer_activations_states(dls, model, layers:list, stats:bool, act
   for batch in tqdm(dls, desc='Fatching data: '):
     with torch.no_grad():
         i+=1
-        pred_senti, pred_lang = model(batch['ids'], batch['mask'], batch['token_type_ids'])
-        output_dict['senti'] += pred_senti.sigmoid().round().squeeze().detach().cpu().numpy().tolist()
-        output_dict['lang'] += pred_lang.sigmoid().round().squeeze().detach().cpu().numpy().tolist()
-
-  if stats: means, stds = dict(), dict()
-  if activation: activations = dict()
+        out = model(batch)
+        if output: output_list.append( (out) )
 
   for k,v in hooks.items():
     if activation: v._stack_activations()
     if remove_hooks: v.close()
 
-  return hooks, output_dict
+  if output:
+      return hooks, output_list
+  else:
+      return hooks
