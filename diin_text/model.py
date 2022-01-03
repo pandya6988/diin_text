@@ -15,15 +15,18 @@ class ForwardHook():
         if stats: self.means, self.stds = [], []
 
     def hook_fn(self, module, input, output):
+        '''This class can be inheritet this class and define your own hook_fn'''
         if self.activation_status: self.activations.append ( output[1].detach().cpu().numpy() )
         if self.stats:
           self.means += output[1].mean(1).detach().cpu().numpy().squeeze().tolist()
           self.stds += output[1].std(1).detach().cpu().numpy().squeeze().tolist()
 
     def _stack_activations(self):
+        '''Stack all output(activations) once all outputs are saved in ForwardHook.activations'''
         self.activations = np.vstack(self.activations)
 
     def close(self):
+        '''remove the hook'''
         self.hook.remove()
         self.status = 'removed'
 

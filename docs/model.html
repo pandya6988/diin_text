@@ -79,21 +79,81 @@ nb_path: "notebooks/01_model.ipynb"
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>_stack_activations()</code>: Stack all output(activations) once all outputs are saved in ForwardHook.activations <br>
-<code>close()</code>: remove the hook</p>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="ForwardHook._stack_activations" class="doc_header"><code>ForwardHook._stack_activations</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/model.py#L24" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ForwardHook._stack_activations</code>()</p>
+</blockquote>
+<p>Stack all output(activations) once all outputs are saved in ForwardHook.activations</p>
+
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This class can be inheritet this class and define your own <code>hook_fn</code></p>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="ForwardHook.close" class="doc_header"><code>ForwardHook.close</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/model.py#L28" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ForwardHook.close</code>()</p>
+</blockquote>
+<p>remove the hook</p>
+
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="ForwardHook.hook_fn" class="doc_header"><code>ForwardHook.hook_fn</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/model.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ForwardHook.hook_fn</code>(<strong><code>module</code></strong>, <strong><code>input</code></strong>, <strong><code>output</code></strong>)</p>
+</blockquote>
+<p>This class can be inheritet this class and define your own hook_fn</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Collect-intermediate-activations-and-stats">Collect intermediate activations and stats<a class="anchor-link" href="#Collect-intermediate-activations-and-stats"> </a></h2>
@@ -111,7 +171,7 @@ nb_path: "notebooks/01_model.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_linear_layer_activations_states" class="doc_header"><code>get_linear_layer_activations_states</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/model.py#L31" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_linear_layer_activations_states</code>(<strong><code>dls</code></strong>, <strong><code>model</code></strong>, <strong><code>layers</code></strong>:<code>list</code>, <strong><code>stats</code></strong>:<code>bool</code>, <strong><code>activation</code></strong>:<code>bool</code>, <strong><code>output</code></strong>:<code>bool</code>, <strong><code>remove_hooks</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="get_linear_layer_activations_states" class="doc_header"><code>get_linear_layer_activations_states</code><a href="https://github.com/pandya6988/diin_text/tree/master/diin_text/model.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_linear_layer_activations_states</code>(<strong><code>dls</code></strong>, <strong><code>model</code></strong>, <strong><code>layers</code></strong>:<code>list</code>, <strong><code>stats</code></strong>:<code>bool</code>, <strong><code>activation</code></strong>:<code>bool</code>, <strong><code>output</code></strong>:<code>bool</code>, <strong><code>remove_hooks</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>useful when model is trained and want to analyze intermediate layers</p>
 
